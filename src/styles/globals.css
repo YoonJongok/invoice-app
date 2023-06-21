@@ -28,3 +28,9 @@
 		@apply text-[13px] leading-[18px] tracking-[-0.1px];
 	}
 }
+
+@layer components {
+	.flexCenterCenter {
+		@apply flex items-center justify-center;
+	}
+}

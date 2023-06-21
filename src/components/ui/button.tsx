@@ -5,38 +5,44 @@ import React from "react";
 
 const buttonVariants = cva(
 	[
-		"min-w-[145px]",
-		"flex",
-		"justify-center",
-		"items-center",
-		"rounded-[5px]",
+		"flexCenterCenter",
+		"rounded-lg",
 		"capitalize",
-		"text-base",
 		"font-bold",
 		"border-transparent",
-		"dark:bg-violet-4",
-		"dark:hover:bg-violet-3",
-		"dark:text-white",
-		"dark:border-transparent",
+		"text-white",
+		"leading-none",
 	],
 	{
 		variants: {
 			intent: {
-				primary: [
-					"bg-violet-4",
-					"hover:bg-violet-3",
-					"text-white",
+				primary: ["bg-violet-3", "hover:bg-violet-2"],
+				addItem: [
+					"bg-grey-1",
+					"hover:bg-grey-3",
+					"text-violet-1",
 					"border-transparent",
 				],
-				secondary: [
-					"bg-violet-1",
-					"hover:bg-violet-2",
-					"text-violet-4",
-					"border-transparent",
+				saveDraft: [
+					"bg-[#373B53]",
+					"hover:bg-navy-4",
+					"text-grey-4",
+					"dark:text-white",
+					"dark:hover:text-white",
 				],
+				edit: [
+					"bg-grey-1",
+					"hover:bg-grey-3",
+					"text-violet-1",
+					"dark:bg-navy-1",
+					"dark:hover:bg-white",
+					"dark:hover:text-grey-3",
+				],
+				delete: ["bg-coral-2", "hover:bg-coral-1"],
 			},
 			size: {
 				base: ["px-6", "py-4"],
+				small: ["p-2"],
 			},
 			fullWidth: {
 				true: ["w-full"],
@@ -48,7 +54,7 @@ const buttonVariants = cva(
 		},
 		compoundVariants: [
 			{
-				intent: ["primary", "secondary"],
+				intent: ["primary"],
 				size: "base",
 			},
 		],

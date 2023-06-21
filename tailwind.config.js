@@ -21,8 +21,9 @@ module.exports = {
 			},
 			colors: {
 				violet: {
-					1: "#9277FF",
-					2: "#7C5DFA",
+					1: "#7E88C3",
+					2: "#9277FF",
+					3: "#7C5DFA",
 				},
 				navy: {
 					1: "#252945",
@@ -31,9 +32,10 @@ module.exports = {
 					4: "#0C0E16",
 				},
 				grey: {
-					1: "#F8F8FB",
-					2: "#DFE3FA",
-					3: "#888EB0",
+					1: "#F9FAFE",
+					2: "#F8F8FB",
+					3: "#DFE3FA",
+					4: "#888EB0",
 				},
 				coral: {
 					1: "#FF9797",
