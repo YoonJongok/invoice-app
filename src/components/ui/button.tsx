@@ -63,12 +63,15 @@ const buttonVariants = cva(
 
 export interface ButtonProps
 	extends React.ComponentProps<"button">,
-		VariantProps<typeof buttonVariants> {}
+		VariantProps<typeof buttonVariants> {
+	withIcon?: boolean;
+}
 
 export const Button = ({
 	className,
 	intent,
 	fullWidth,
+	withIcon = false,
 	children,
 	...props
 }: React.PropsWithChildren<ButtonProps>) => {
