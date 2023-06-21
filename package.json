@@ -7,7 +7,7 @@
     "dev": "npm run open-browser && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --ext js,jsx,ts,tsx --config .eslintrc.json",
+    "lint": "next lint",
     "lint:fix": "eslint --fix src --ext js,jsx,ts,tsx --config .eslintrc.json",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx} --config .prettierrc",
     "prettier:fix": "prettier --wrtie src/**/*.{js,jsx,ts,tsx} --config .prettierrc",
