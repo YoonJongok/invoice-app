@@ -19,7 +19,33 @@ module.exports = {
 			fontFamily: {
 				sans: ["var(--font-sans)", ...fontFamily.sans],
 			},
-			colors: {},
+			colors: {
+				violet: {
+					1: "#9277FF",
+					2: "#7C5DFA",
+				},
+				navy: {
+					1: "#252945",
+					2: "#1E2139",
+					3: "#141625",
+					4: "#0C0E16",
+				},
+				grey: {
+					1: "#F8F8FB",
+					2: "#DFE3FA",
+					3: "#888EB0",
+				},
+				coral: {
+					1: "#FF9797",
+					2: "#EC5757",
+				},
+			},
+			screens: {
+				// @media (min-width: 'n'px)
+				mobile: "375px",
+				tablet: "768px",
+				desktop: "1280px",
+			},
 			borderRadius: {
 				lg: "var(--radius-lg)",
 				md: "var(--radius-md)",
