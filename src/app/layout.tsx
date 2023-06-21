@@ -1,7 +1,11 @@
+import { cn } from "@/lib/utils";
 import "../styles/globals.css";
-import { Inter } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const leagueSpartan = League_Spartan({
+	subsets: ["latin"],
+	variable: "--font-sans",
+});
 
 export const metadata = {
 	title: "Create Next App",
@@ -15,7 +19,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={cn(leagueSpartan.className)}>{children}</body>
 		</html>
 	);
 }
