@@ -1,10 +1,11 @@
 'use client';
 import React from 'react';
-import { useForm, FormProvider, useFormContext } from 'react-hook-form';
-import { Input } from '../ui/input';
-import { FlexBoxColumn } from '../ui/flexbox-column';
-import { FlexBoxRow } from '../ui/flexbox-row';
-import { DatePicker } from '../date-picker';
+import { useForm, FormProvider } from 'react-hook-form';
+import { Input } from '../../ui/input';
+import { FlexBoxColumn } from '../../ui/flexbox-column';
+import { FlexBoxRow } from '../../ui/flexbox-row';
+import { DatePicker } from '../../date-picker';
+import { PaymentTermsSelect } from './payment-terms-select';
 
 export const AddNewInvoiceForm = () => {
   const methods = useForm();
@@ -40,7 +41,7 @@ export const AddNewInvoiceForm = () => {
         </FlexBoxColumn>
         <FlexBoxColumn className='gap-6 mt-10'>
           <DatePicker label={'invoice date'} />
-          <Input label={'payment terms'} type='email' />
+          <PaymentTermsSelect label='payment terms' />
           <Input label={'project description'} type='text' />
         </FlexBoxColumn>
       </form>

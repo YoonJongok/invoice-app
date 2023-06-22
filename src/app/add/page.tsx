@@ -1,5 +1,5 @@
 import { AddNewInvoiceFooter } from '@/components/add-new-invoice';
-import { AddNewInvoiceForm } from '@/components/add-new-invoice/add-new-invoice-form';
+import { AddNewInvoiceForm } from '@/components/add-new-invoice/add-new-invoice-form/add-new-invoice-form';
 import { GoBackButton } from '@/components/go-back-button';
 import { FlexBoxColumn } from '@/components/ui/flexbox-column';
 import { FlexBoxRow } from '@/components/ui/flexbox-row';

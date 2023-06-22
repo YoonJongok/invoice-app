@@ -19,10 +19,7 @@ export const DatePicker = ({ label }: DatePickerProps) => {
       <PopoverTrigger asChild>
         <Input
           label={label && label}
-          className={cn(
-            'cursor-pointer'
-            // !field.value && 'text-muted-foreground'
-          )}
+          className={'cursor-pointer'}
           placeholder='Pick a date'
           value={date ? format(date, 'PP') : 'Pick a date'}
           Icon={() => (
