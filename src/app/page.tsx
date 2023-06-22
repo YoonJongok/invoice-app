@@ -1,5 +1,6 @@
 import { Icons } from '@/components/Icons';
 import { InvoiceCard } from '@/components/invoice-card';
+import { NoInvoiceMessage } from '@/components/no-invoice-message';
 import { Button } from '@/components/ui/button';
 import { FlexBoxColumn } from '@/components/ui/flexbox-column';
 import { FlexBoxRow } from '@/components/ui/flexbox-row';
@@ -24,7 +25,8 @@ export default function Home() {
         </FlexBoxRow>
       </FlexBoxRow>
       <FlexBoxColumn>
-        <InvoiceCard />
+        <NoInvoiceMessage />
+        {/* <InvoiceCard /> */}
       </FlexBoxColumn>
     </main>
   );

@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 
 export const InvoiceCard = () => {
   return (
-    <FlexBoxColumn className='p-6 bg-white rounded-[8px] gap-8'>
+    <FlexBoxColumn className='p-6 bg-white rounded-[8px] gap-8 cursor-pointer'>
       <FlexBoxRow intent={'flexBetweenCenter'}>
         <h3 className='font-bold capitalize'>
           <span className='italic text-violet-1 mr-[3px]'>#</span>RT3080

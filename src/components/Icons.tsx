@@ -98,7 +98,7 @@ export const Icons = {
       />
     </svg>
   ),
-  empty: ({ ...props }: React.SVGProps<SVGSVGElement>) => (
+  noInvoiceNotif: ({ ...props }: React.SVGProps<SVGSVGElement>) => (
     <svg width='242' height='200' xmlns='http://www.w3.org/2000/svg' {...props}>
       <g fill-rule='nonzero' fill='none'>
         <path fill='#E6E7E8' d='M31.136 83.879l85.035-53.67 85.036 53.67v78.304H31.136z' />
