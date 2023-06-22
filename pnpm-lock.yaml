@@ -1,7 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@hookform/resolvers': ^3.1.1
+  '@radix-ui/react-popover': ^1.0.6
   '@radix-ui/react-select': ^1.2.2
+  '@radix-ui/react-slot': ^1.0.2
   '@types/node': 20.3.1
   '@types/react': 18.2.13
   '@types/react-dom': 18.2.6
@@ -10,6 +13,7 @@ specifiers:
   autoprefixer: 10.4.14
   class-variance-authority: ^0.6.0
   clsx: ^1.2.1
+  date-fns: ^2.30.0
   eslint: 8.43.0
   eslint-config-next: 13.4.6
   eslint-config-prettier: ^8.8.0
@@ -18,29 +22,39 @@ specifiers:
   next: 13.4.6
   postcss: 8.4.24
   react: 18.2.0
+  react-day-picker: ^8.8.0
   react-dom: 18.2.0
+  react-hook-form: ^7.45.0
   tailwind-merge: ^1.13.2
   tailwindcss: 3.3.2
   tailwindcss-animate: ^1.0.6
   typescript: 5.1.3
+  zod: ^3.21.4
 
 dependencies:
+  '@hookform/resolvers': 3.1.1_react-hook-form@7.45.0
+  '@radix-ui/react-popover': 1.0.6_v7nsckbnkip4ww4dqloamsmv6y
   '@radix-ui/react-select': 1.2.2_v7nsckbnkip4ww4dqloamsmv6y
+  '@radix-ui/react-slot': 1.0.2_kipdvjt52frzxcrtuwg5whlwdi
   '@types/node': 20.3.1
   '@types/react': 18.2.13
   '@types/react-dom': 18.2.6
   autoprefixer: 10.4.14_postcss@8.4.24
   class-variance-authority: 0.6.0_typescript@5.1.3
   clsx: 1.2.1
+  date-fns: 2.30.0
   lucide-react: 0.248.0_react@18.2.0
   next: 13.4.6_biqbaboplfbrettd7655fr4n2y
   postcss: 8.4.24
   react: 18.2.0
+  react-day-picker: 8.8.0_kzhlcyde2l6xjiirkbg7jzhosa
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.45.0_react@18.2.0
   tailwind-merge: 1.13.2
   tailwindcss: 3.3.2
   tailwindcss-animate: 1.0.6_tailwindcss@3.3.2
   typescript: 5.1.3
+  zod: 3.21.4
 
 devDependencies:
   '@typescript-eslint/eslint-plugin': 5.60.0_6yzi2ymi2jevhjfd3hf6w262e4
@@ -119,6 +133,14 @@ packages:
       '@floating-ui/dom': 1.4.2
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@hookform/resolvers/3.1.1_react-hook-form@7.45.0:
+    resolution: {integrity: sha512-tS16bAUkqjITNSvbJuO1x7MXbn7Oe8ZziDTJdA9mMvsoYthnOOiznOTGBYwbdlYBgU+tgpI/BtTU3paRbCuSlg==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.45.0_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.10:
@@ -472,6 +494,41 @@ packages:
       react: 18.2.0
     dev: false
 
+  /@radix-ui/react-popover/1.0.6_v7nsckbnkip4ww4dqloamsmv6y:
+    resolution: {integrity: sha512-cZ4defGpkZ0qTRtlIBzJLSzL6ht7ofhhW4i1+pkemjV1IKXm0wgCRnee154qlV6r9Ttunmh2TNZhMfV2bavUyA==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.5
+      '@radix-ui/primitive': 1.0.1
+      '@radix-ui/react-compose-refs': 1.0.1_kipdvjt52frzxcrtuwg5whlwdi
+      '@radix-ui/react-context': 1.0.1_kipdvjt52frzxcrtuwg5whlwdi
+      '@radix-ui/react-dismissable-layer': 1.0.4_v7nsckbnkip4ww4dqloamsmv6y
+      '@radix-ui/react-focus-guards': 1.0.1_kipdvjt52frzxcrtuwg5whlwdi
+      '@radix-ui/react-focus-scope': 1.0.3_v7nsckbnkip4ww4dqloamsmv6y
+      '@radix-ui/react-id': 1.0.1_kipdvjt52frzxcrtuwg5whlwdi
+      '@radix-ui/react-popper': 1.1.2_v7nsckbnkip4ww4dqloamsmv6y
+      '@radix-ui/react-portal': 1.0.3_v7nsckbnkip4ww4dqloamsmv6y
+      '@radix-ui/react-presence': 1.0.1_v7nsckbnkip4ww4dqloamsmv6y
+      '@radix-ui/react-primitive': 1.0.3_v7nsckbnkip4ww4dqloamsmv6y
+      '@radix-ui/react-slot': 1.0.2_kipdvjt52frzxcrtuwg5whlwdi
+      '@radix-ui/react-use-controllable-state': 1.0.1_kipdvjt52frzxcrtuwg5whlwdi
+      '@types/react': 18.2.13
+      '@types/react-dom': 18.2.6
+      aria-hidden: 1.2.3
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-remove-scroll: 2.5.5_kipdvjt52frzxcrtuwg5whlwdi
+    dev: false
+
   /@radix-ui/react-popper/1.1.2_v7nsckbnkip4ww4dqloamsmv6y:
     resolution: {integrity: sha512-1CnGGfFi/bbqtJZZ0P/NQY20xdG3E0LALJaLUEoKwPLwl6PPPfbeiCqMVQnhoFRAxjJj4RpBRJzDmUgsex2tSg==}
     peerDependencies:
@@ -517,6 +574,28 @@ packages:
     dependencies:
       '@babel/runtime': 7.22.5
       '@radix-ui/react-primitive': 1.0.3_v7nsckbnkip4ww4dqloamsmv6y
+      '@types/react': 18.2.13
+      '@types/react-dom': 18.2.6
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@radix-ui/react-presence/1.0.1_v7nsckbnkip4ww4dqloamsmv6y:
+    resolution: {integrity: sha512-UXLW4UAbIY5ZjcvzjfRFo5gxva8QirC9hF7wRE4U5gz+TP0DbRk+//qyuAQ1McDxBt1xNMBTaciFGvEmJvAZCg==}
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+      react-dom: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.22.5
+      '@radix-ui/react-compose-refs': 1.0.1_kipdvjt52frzxcrtuwg5whlwdi
+      '@radix-ui/react-use-layout-effect': 1.0.1_kipdvjt52frzxcrtuwg5whlwdi
       '@types/react': 18.2.13
       '@types/react-dom': 18.2.6
       react: 18.2.0
@@ -1227,6 +1306,13 @@ packages:
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: true
+
+  /date-fns/2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
+    engines: {node: '>=0.11'}
+    dependencies:
+      '@babel/runtime': 7.22.5
+    dev: false
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -2733,6 +2819,16 @@ packages:
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  /react-day-picker/8.8.0_kzhlcyde2l6xjiirkbg7jzhosa:
+    resolution: {integrity: sha512-QIC3uOuyGGbtypbd5QEggsCSqVaPNu8kzUWquZ7JjW9fuWB9yv7WyixKmnaFelTLXFdq7h7zU6n/aBleBqe/dA==}
+    peerDependencies:
+      date-fns: ^2.28.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      date-fns: 2.30.0
+      react: 18.2.0
+    dev: false
+
   /react-dom/18.2.0_react@18.2.0:
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -2741,6 +2837,15 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hook-form/7.45.0_react@18.2.0:
+    resolution: {integrity: sha512-AbHeZ4ad+0dEIknSW9dBgIwcvRDfZ1O97sgj75WaMdOX0eg8TBiUf9wxzVkIjZbk76BBIE9lmFOzyD4PN80ZQg==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:

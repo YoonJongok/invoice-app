@@ -5,7 +5,7 @@ import React from 'react';
 import { Icons } from '../Icons';
 import { FlexBoxRow } from './flexbox-row';
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
   [
     'flexCenterCenter',
     'rounded-lg',
