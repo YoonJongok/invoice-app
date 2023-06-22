@@ -4,18 +4,21 @@ import { FlexBoxRow } from './ui/flexbox-row';
 import { Icons } from './Icons';
 import Image from 'next/image';
 import AvartarImg from '../../public/assets/avartar.png';
+import Link from 'next/link';
 
 export const NavBar = () => {
   return (
     <header className={cn('relative flex justify-between items-center bg-navy-1')}>
-      <FlexBoxRow
-        intent={'flexCenterCenter'}
-        className={cn(
-          'p-[22px] bg-violet-2 rounded-r-[20px] bg-[url("/assets/logo-background.png")]'
-        )}
-      >
-        <Icons.logo />
-      </FlexBoxRow>
+      <Link href={'/'}>
+        <FlexBoxRow
+          intent={'flexCenterCenter'}
+          className={cn(
+            'p-[22px] bg-violet-2 rounded-r-[20px] bg-[url("/assets/logo-background.png")]'
+          )}
+        >
+          <Icons.logo />
+        </FlexBoxRow>
+      </Link>
       <FlexBoxRow>
         <FlexBoxRow
           intent={'flexCenterCenter'}
