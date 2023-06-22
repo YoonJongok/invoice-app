@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import '../styles/globals.css';
 import { League_Spartan } from 'next/font/google';
+import { NavBar } from '@/components/nav-bar';
 
 const leagueSpartan = League_Spartan({
   subsets: ['latin'],
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={cn(leagueSpartan.className)}>{children}</body>
+      <body className={cn(leagueSpartan.className)}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,5 +1,5 @@
 'use client';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { cn } from '@/lib/utils';
 import { type VariantProps, cva } from 'class-variance-authority';
 
@@ -24,7 +24,7 @@ const flexBoxRow = cva(['flex', 'flex-row'], {
 export interface FlexBoxRowProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof flexBoxRow> {
-  children: ReactNode;
+  as?: 'header';
 }
 
 export const FlexBoxRow = ({
@@ -32,9 +32,18 @@ export const FlexBoxRow = ({
   intent,
   modifier,
   fullWidth,
+  as,
   children,
   ...props
-}: FlexBoxRowProps) => {
+}: React.PropsWithChildren<FlexBoxRowProps>) => {
+  if (as && as === 'header') {
+    return (
+      <header {...props} className={cn(flexBoxRow({ intent, className, modifier, fullWidth }))}>
+        {children}
+      </header>
+    );
+  }
+
   return (
     <div {...props} className={cn(flexBoxRow({ intent, className, modifier, fullWidth }))}>
       {children}
