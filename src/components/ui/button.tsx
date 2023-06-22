@@ -14,6 +14,8 @@ const buttonVariants = cva(
     'border-transparent',
     'text-white',
     'leading-none',
+    'bg-violet-3',
+    'hover:bg-violet-2',
   ],
   {
     variants: {
@@ -87,13 +89,14 @@ export interface ButtonProps
 export const Button = ({
   className,
   intent,
+  size,
   fullWidth,
   withIcon = false,
   children,
   ...props
 }: React.PropsWithChildren<ButtonProps>) => {
   return (
-    <button className={cn(buttonVariants({ intent, fullWidth, className }))} {...props}>
+    <button className={cn(buttonVariants({ intent, size, fullWidth, className }))} {...props}>
       {intent === 'paid' || (intent === 'pending' && <Icons.oval />)}
       {intent === 'newInvoice' && (
         <FlexBoxRow intent={'flexCenterCenter'} className='bg-white p-[10px] rounded-full mr-2'>

@@ -4,11 +4,10 @@ import { NoInvoiceMessage } from '@/components/no-invoice-message';
 import { Button } from '@/components/ui/button';
 import { FlexBoxColumn } from '@/components/ui/flexbox-column';
 import { FlexBoxRow } from '@/components/ui/flexbox-row';
-import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className='w-full'>
+    <FlexBoxColumn as='main' className='w-full px-6 py-8'>
       <FlexBoxRow intent={'flexBetweenCenter'} className='pb-8'>
         <FlexBoxColumn>
           <h2 className='capitalize'>Invoices</h2>
@@ -25,10 +24,10 @@ export default function Home() {
         </FlexBoxRow>
       </FlexBoxRow>
       <FlexBoxColumn>
-        <NoInvoiceMessage />
-        {/* <InvoiceCard /> */}
+        {/* <NoInvoiceMessage /> */}
+        <InvoiceCard />
       </FlexBoxColumn>
-    </main>
+    </FlexBoxColumn>
   );
 }
 

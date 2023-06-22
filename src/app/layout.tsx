@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body className={cn('flex flex-col', leagueSpartan.className)}>
         <NavBar />
-        <FlexBoxColumn className='items-center px-6 py-8'>{children}</FlexBoxColumn>
+        {children}
       </body>
     </html>
   );
