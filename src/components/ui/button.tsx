@@ -45,7 +45,7 @@ const buttonVariants = cva(
     },
     defaultVariants: {
       intent: 'primary',
-      size: 'base',
+      size: 'small',
     },
     compoundVariants: [
       {

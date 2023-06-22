@@ -9,13 +9,13 @@
     --radius-sm: 0.25rem;
   }
   body {
-    @apply relative w-full min-h-screen h-full;
+    @apply relative w-full min-h-screen h-full bg-grey-2;
   }
   h1 {
     @apply text-[36px] leading-[33px] tracking-[-1px];
   }
   h2 {
-    @apply text-[24px] leading-[22px] tracking-[-0.75px];
+    @apply text-[24px] leading-[22px] tracking-[-0.75px] font-bold;
   }
   h3 {
     @apply text-[16px] leading-[24px] tracking-[-0.25px];

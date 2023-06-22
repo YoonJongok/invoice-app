@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import '../styles/globals.css';
 import { League_Spartan } from 'next/font/google';
 import { NavBar } from '@/components/nav-bar';
+import { FlexBoxColumn } from '@/components/ui/flexbox-column';
 
 const leagueSpartan = League_Spartan({
   subsets: ['latin'],
@@ -16,9 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
-      <body className={cn(leagueSpartan.className)}>
+      <body className={cn('flex flex-col', leagueSpartan.className)}>
         <NavBar />
-        {children}
+        <FlexBoxColumn className='items-center px-6 py-8'>{children}</FlexBoxColumn>
       </body>
     </html>
   );
