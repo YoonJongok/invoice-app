@@ -2,6 +2,8 @@
 import { cn } from '@/lib/utils';
 import { cva, type VariantProps } from 'class-variance-authority';
 import React from 'react';
+import { Icons } from '../Icons';
+import { FlexBoxRow } from './flexbox-row';
 
 const buttonVariants = cva(
   [
@@ -16,7 +18,7 @@ const buttonVariants = cva(
   {
     variants: {
       intent: {
-        primary: ['bg-violet-3', 'hover:bg-violet-2'],
+        newInvoice: ['bg-violet-3', 'hover:bg-violet-2'],
         addItem: ['bg-grey-1', 'hover:bg-grey-3', 'text-violet-1', 'border-transparent'],
         saveDraft: [
           'bg-navy-1',
@@ -34,6 +36,26 @@ const buttonVariants = cva(
           'dark:hover:text-grey-3',
         ],
         delete: ['bg-coral-2', 'hover:bg-coral-1'],
+        paid: [
+          'w-[104px]',
+          'pb-3',
+          'pt-5',
+          'gap-2',
+          'bg-[#e2f6ef]',
+          'text-[#33D69F]',
+          'text-[15px]',
+          'rounded-sm',
+        ],
+        pending: [
+          'w-[104px]',
+          'pb-3',
+          'pt-5',
+          'gap-2',
+          'bg-[#fde7c9]',
+          'text-[#FF8F00]',
+          'text-[15px]',
+          'rounded-sm',
+        ],
       },
       size: {
         base: ['px-6', 'py-4'],
@@ -44,12 +66,12 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      intent: 'primary',
+      intent: 'newInvoice',
       size: 'small',
     },
     compoundVariants: [
       {
-        intent: ['primary'],
+        intent: ['newInvoice'],
         size: 'base',
       },
     ],
@@ -72,6 +94,13 @@ export const Button = ({
 }: React.PropsWithChildren<ButtonProps>) => {
   return (
     <button className={cn(buttonVariants({ intent, fullWidth, className }))} {...props}>
+      {intent === 'paid' || (intent === 'pending' && <Icons.oval />)}
+      {intent === 'newInvoice' && (
+        <FlexBoxRow intent={'flexCenterCenter'} className='bg-white p-[10px] rounded-full mr-2'>
+          <Icons.plus />
+        </FlexBoxRow>
+      )}
+
       {children}
     </button>
   );

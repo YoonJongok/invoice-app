@@ -1,4 +1,5 @@
 import { Icons } from '@/components/Icons';
+import { InvoiceCard } from '@/components/invoice-card';
 import { Button } from '@/components/ui/button';
 import { FlexBoxColumn } from '@/components/ui/flexbox-column';
 import { FlexBoxRow } from '@/components/ui/flexbox-row';
@@ -17,15 +18,14 @@ export default function Home() {
             <h3 className='font-bold'>Filter</h3>
             <Icons.arrowDown />
           </FlexBoxRow>
-          <Button intent={'primary'} className='pr-4'>
-            <FlexBoxRow intent={'flexCenterCenter'} className='bg-white p-[10px] rounded-full mr-2'>
-              <Icons.plus />
-            </FlexBoxRow>
+          <Button intent={'newInvoice'} className='pr-4'>
             New
           </Button>
         </FlexBoxRow>
       </FlexBoxRow>
-      <FlexBoxColumn></FlexBoxColumn>
+      <FlexBoxColumn>
+        <InvoiceCard />
+      </FlexBoxColumn>
     </main>
   );
 }
