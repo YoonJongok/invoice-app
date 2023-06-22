@@ -1,3 +1,4 @@
+import { AddNewInvoiceFooter } from '@/components/add-new-invoice';
 import { GoBackButton } from '@/components/go-back-button';
 import { FlexBoxColumn } from '@/components/ui/flexbox-column';
 import { FlexBoxRow } from '@/components/ui/flexbox-row';
@@ -10,6 +11,7 @@ export default function AddNewInvoice() {
           <GoBackButton />
         </FlexBoxRow>
       </FlexBoxColumn>
+      <AddNewInvoiceFooter />
     </>
   );
 }
