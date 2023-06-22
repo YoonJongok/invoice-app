@@ -1,6 +1,5 @@
 import React from 'react';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
-import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
 import { Icons } from './Icons';
@@ -25,7 +24,7 @@ export const DatePicker = ({ label }: DatePickerProps) => {
             // !field.value && 'text-muted-foreground'
           )}
           placeholder='Pick a date'
-          value={date ? format(date, 'PPP') : 'Pick a date'}
+          value={date ? format(date, 'PP') : 'Pick a date'}
           Icon={() => (
             <FlexBoxRow
               intent={'flexCenterCenter'}
