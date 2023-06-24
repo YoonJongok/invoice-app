@@ -5,7 +5,7 @@ import { FlexBoxColumn } from '../ui/flexbox-column';
 import { Icons } from '../Icons';
 import { Button } from '../ui/button';
 import { useRouter } from 'next/navigation';
-import { routes } from '@/lib/config/routes';
+import { routes } from '@/config/routes';
 
 export const HomeMainHeader = () => {
   const router = useRouter();
