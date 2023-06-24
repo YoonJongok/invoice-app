@@ -3,7 +3,11 @@ import React from 'react';
 import { Footer } from '../ui/footer';
 import { Button } from '../ui/button';
 
-export const AddNewInvoiceFooter = () => {
+interface AddNewInvoiceFooterProps {
+  type: 'addInvoice' | 'editInvoice';
+}
+
+export const AddNewInvoiceFooter = ({ type }: AddNewInvoiceFooterProps) => {
   return (
     <Footer>
       <Button intent={'edit'} size={'base'}>
